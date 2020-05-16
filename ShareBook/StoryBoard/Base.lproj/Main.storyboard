@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svu-oO-Qoa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ホーム-->
+        <scene sceneID="saL-Dl-suL">
+            <objects>
+                <viewController storyboardIdentifier="Home" id="e7B-m7-7tu" customClass="HomeViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="338-Bk-I5P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="amt-MC-OTt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="avF-9f-3Eo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hx-ny-bTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938" y="834"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="kwO-Ue-wTm">
+            <objects>
+                <viewController storyboardIdentifier="Post" id="Ipb-3m-Dea" customClass="PostViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4e-S4-vit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Njt-kq-9Mw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpz-f6-c8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="1521"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="CpA-6O-RI5">
+            <objects>
+                <viewController storyboardIdentifier="Setting" id="sfT-dw-T2F" customClass="SettingViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Gf-4f-BNI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tAU-BS-eXc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" image="setting" id="7KS-bI-BGN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04M-Ll-3H0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="834"/>
+        </scene>
+        <!--投稿-->
+        <scene sceneID="F9o-6F-e7B">
+            <objects>
+                <viewController storyboardIdentifier="ImageSelect" id="hbB-Rl-ver" customClass="ImageSelectViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="diK-5m-GJC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Up6-XD-A04"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="投稿" image="paperplane" catalog="system" id="siv-jf-NUX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIK-L1-fbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="834"/>
+        </scene>
+        <!--読みたい-->
+        <scene sceneID="ia0-1s-L9A">
+            <objects>
+                <viewController storyboardIdentifier="Favorite" id="MDg-as-aaC" customClass="FavoriteViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7kl-Wz-PAC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5Ij-lB-noJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="読みたい" image="star" catalog="system" id="OiD-91-8rZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc1-ZS-Rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772" y="834"/>
+        </scene>
+        <!--ニュース-->
+        <scene sceneID="C3O-5g-EOQ">
+            <objects>
+                <viewController storyboardIdentifier="News" id="5C5-WW-ZdK" customClass="NewsViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uWA-Xb-cMk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D34-dF-3mq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ニュース" image="exclamationmark.bubble" catalog="system" id="9k3-5s-XM4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QpQ-0s-jCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="834"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ZxQ-TA-Qfa">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="gsr-z7-jQL" customClass="LoginViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="veT-p2-kgB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZQh-24-I8f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6N-OO-AFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="102"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zHv-jQ-bok">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="svu-oO-Qoa" customClass="TabBarController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XcF-nM-ILi">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e7B-m7-7tu" kind="relationship" relationship="viewControllers" id="NQq-8F-3JY"/>
+                        <segue destination="hbB-Rl-ver" kind="relationship" relationship="viewControllers" id="3vX-Ig-S4T"/>
+                        <segue destination="MDg-as-aaC" kind="relationship" relationship="viewControllers" id="U6I-Fo-GCp"/>
+                        <segue destination="5C5-WW-ZdK" kind="relationship" relationship="viewControllers" id="tH5-t0-Jtj"/>
+                        <segue destination="sfT-dw-T2F" kind="relationship" relationship="viewControllers" id="GGD-sH-RXQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryi-1B-YFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exclamationmark.bubble" catalog="system" width="64" height="54"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="paperplane" catalog="system" width="64" height="60"/>
+        <image name="setting" width="25" height="25"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
