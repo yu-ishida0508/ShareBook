@@ -105,17 +105,96 @@
         <!--Login View Controller-->
         <scene sceneID="ZxQ-TA-Qfa">
             <objects>
-                <viewController storyboardIdentifier="Login" id="gsr-z7-jQL" customClass="LoginViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="gsr-z7-jQL" customClass="LoginViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="veT-p2-kgB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="WiT-ks-Zec">
+                                <rect key="frame" x="20" y="94" width="374" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="EwY-Rd-t4C"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXG-Nj-Nrk">
+                                <rect key="frame" x="57" y="144" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="UXL-M2-Tii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード(6文字以上)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-us-Ie6">
+                                <rect key="frame" x="57" y="178" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dTk-22-AdV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アカウント作成時の表示名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cry-ct-C4X">
+                                <rect key="frame" x="57" y="212" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="yCe-C7-EF0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsA-GZ-Xnf">
+                                <rect key="frame" x="57" y="266" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="HL1-ul-DrR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" title="ログイン" backgroundImage="Rectangle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLoginButton:" destination="gsr-z7-jQL" eventType="touchUpInside" id="pPc-m8-FJi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0h-D0-hXZ">
+                                <rect key="frame" x="57" y="311" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="3ML-zC-pCV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" title="アカウント作成" backgroundImage="Rectangle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCreateAccountButton:" destination="gsr-z7-jQL" eventType="touchUpInside" id="n7d-Wo-Lrd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rsA-GZ-Xnf" firstAttribute="top" secondItem="Cry-ct-C4X" secondAttribute="bottom" constant="20" id="09U-CC-9nI"/>
+                            <constraint firstItem="A0h-D0-hXZ" firstAttribute="top" secondItem="rsA-GZ-Xnf" secondAttribute="bottom" constant="5" id="4CV-lo-eGt"/>
+                            <constraint firstItem="WiT-ks-Zec" firstAttribute="centerX" secondItem="veT-p2-kgB" secondAttribute="centerX" id="4PT-CR-0f9"/>
+                            <constraint firstAttribute="trailing" secondItem="WiT-ks-Zec" secondAttribute="trailing" constant="20" id="4sD-LI-MWu"/>
+                            <constraint firstItem="pXG-Nj-Nrk" firstAttribute="centerX" secondItem="veT-p2-kgB" secondAttribute="centerX" id="7yN-Xj-5tP"/>
+                            <constraint firstItem="Cry-ct-C4X" firstAttribute="top" secondItem="dtA-us-Ie6" secondAttribute="bottom" id="9EW-F7-HWE"/>
+                            <constraint firstItem="pXG-Nj-Nrk" firstAttribute="top" secondItem="ZQh-24-I8f" secondAttribute="top" constant="100" id="Agl-4y-CTM"/>
+                            <constraint firstItem="rsA-GZ-Xnf" firstAttribute="centerX" secondItem="veT-p2-kgB" secondAttribute="centerX" id="CZf-vd-Iol"/>
+                            <constraint firstItem="dtA-us-Ie6" firstAttribute="centerX" secondItem="veT-p2-kgB" secondAttribute="centerX" id="MPl-am-eaZ"/>
+                            <constraint firstItem="A0h-D0-hXZ" firstAttribute="centerX" secondItem="veT-p2-kgB" secondAttribute="centerX" id="RyZ-Ys-T89"/>
+                            <constraint firstItem="dtA-us-Ie6" firstAttribute="top" secondItem="pXG-Nj-Nrk" secondAttribute="bottom" id="ckw-py-8pg"/>
+                            <constraint firstItem="WiT-ks-Zec" firstAttribute="top" secondItem="ZQh-24-I8f" secondAttribute="top" constant="50" id="mlp-Tj-saC"/>
+                            <constraint firstItem="WiT-ks-Zec" firstAttribute="leading" secondItem="veT-p2-kgB" secondAttribute="leading" constant="20" id="tWj-EA-ICN"/>
+                            <constraint firstItem="Cry-ct-C4X" firstAttribute="centerX" secondItem="veT-p2-kgB" secondAttribute="centerX" id="vix-d5-uAS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZQh-24-I8f"/>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="Cry-ct-C4X" id="woH-z4-1gG"/>
+                        <outlet property="mailAddressTextField" destination="pXG-Nj-Nrk" id="pes-7c-6pk"/>
+                        <outlet property="passwordTextField" destination="dtA-us-Ie6" id="ZAv-mg-7bC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6N-OO-AFk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="102"/>
+            <point key="canvasLocation" x="1002.8985507246377" y="101.78571428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zHv-jQ-bok">
@@ -123,6 +202,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="svu-oO-Qoa" customClass="TabBarController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XcF-nM-ILi">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -140,6 +220,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Combined Shape" width="1017" height="903"/>
+        <image name="Rectangle" width="300" height="40"/>
         <image name="exclamationmark.bubble" catalog="system" width="64" height="54"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="paperplane" catalog="system" width="64" height="60"/>

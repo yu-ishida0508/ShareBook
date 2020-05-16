@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import Firebase
 
 class TabBarController: UITabBarController,UITabBarControllerDelegate {
+    
+//MARK: - ログイン有無の確認
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // currentUserがnilならログインしていない
+        if Auth.auth().currentUser == nil {
+            // ログインしていないときの処理
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                self.present(loginViewController!, animated: true, completion: nil) //モーダル画面表示
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
