@@ -111,9 +111,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="WiT-ks-Zec">
-                                <rect key="frame" x="20" y="94" width="374" height="280"/>
+                                <rect key="frame" x="20" y="94" width="374" height="320"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="EwY-Rd-t4C"/>
+                                    <constraint firstAttribute="height" constant="320" id="EwY-Rd-t4C"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXG-Nj-Nrk">
@@ -166,6 +166,15 @@
                                     <action selector="handleCreateAccountButton:" destination="gsr-z7-jQL" eventType="touchUpInside" id="n7d-Wo-Lrd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5a-jS-r3y">
+                                <rect key="frame" x="43" y="371" width="99" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="パスワード再設定"/>
+                                <connections>
+                                    <segue destination="vEo-fW-V49" kind="show" id="Uh8-rn-GUt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -196,6 +205,73 @@
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="101.78571428571428"/>
         </scene>
+        <!--Reset Pass View Controller-->
+        <scene sceneID="J3N-fq-VyC">
+            <objects>
+                <viewController storyboardIdentifier="ResetPass" id="vEo-fW-V49" customClass="ResetPassViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T6l-rK-MRd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ResetPass" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-di-sxM">
+                                <rect key="frame" x="20" y="50" width="374" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Nf8-It-iQ1"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8D-Gb-MMx">
+                                <rect key="frame" x="57" y="130" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Hj2-er-KbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF8-NR-Ydp">
+                                <rect key="frame" x="57" y="184" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="f1p-DD-G5D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" title="メール送信" backgroundImage="ResetPassBar"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="vEo-fW-V49" eventType="touchUpInside" id="eGU-IV-lL3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-AU-ifs">
+                                <rect key="frame" x="327" y="294" width="30" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="EsQ-kw-uvA" kind="unwind" unwindAction="unwind:" id="ekS-dk-AmA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OF8-NR-Ydp" firstAttribute="top" secondItem="f8D-Gb-MMx" secondAttribute="bottom" constant="20" id="2p5-CC-4e7"/>
+                            <constraint firstItem="f8D-Gb-MMx" firstAttribute="top" secondItem="Hoo-6D-INc" secondAttribute="top" constant="130" id="C0E-I5-uLO"/>
+                            <constraint firstItem="Y0h-di-sxM" firstAttribute="top" secondItem="Hoo-6D-INc" secondAttribute="top" constant="50" id="C6D-ad-FH6"/>
+                            <constraint firstItem="Nen-AU-ifs" firstAttribute="trailing" secondItem="OF8-NR-Ydp" secondAttribute="trailing" id="FjP-ym-5cS"/>
+                            <constraint firstItem="Y0h-di-sxM" firstAttribute="centerX" secondItem="T6l-rK-MRd" secondAttribute="centerX" id="GYN-Sv-u7d"/>
+                            <constraint firstItem="Y0h-di-sxM" firstAttribute="leading" secondItem="T6l-rK-MRd" secondAttribute="leading" constant="20" id="dxe-en-DHo"/>
+                            <constraint firstItem="OF8-NR-Ydp" firstAttribute="centerX" secondItem="T6l-rK-MRd" secondAttribute="centerX" id="eU0-qG-jF3"/>
+                            <constraint firstItem="f8D-Gb-MMx" firstAttribute="centerX" secondItem="T6l-rK-MRd" secondAttribute="centerX" id="jrF-Bh-tQD"/>
+                            <constraint firstAttribute="trailing" secondItem="Y0h-di-sxM" secondAttribute="trailing" constant="20" id="lOx-7Z-Kab"/>
+                            <constraint firstItem="Nen-AU-ifs" firstAttribute="top" secondItem="OF8-NR-Ydp" secondAttribute="bottom" constant="70" id="ypX-9l-bAx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hoo-6D-INc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kaU-bM-jPd"/>
+                    <connections>
+                        <outlet property="resetMailAddressTextField" destination="f8D-Gb-MMx" id="yEw-Ye-SCy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2B-Dk-hE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="EsQ-kw-uvA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="101.78571428571428"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zHv-jQ-bok">
             <objects>
@@ -222,6 +298,8 @@
     <resources>
         <image name="Combined Shape" width="1017" height="903"/>
         <image name="Rectangle" width="300" height="40"/>
+        <image name="ResetPass" width="1017" height="903"/>
+        <image name="ResetPassBar" width="300" height="40"/>
         <image name="exclamationmark.bubble" catalog="system" width="64" height="54"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="paperplane" catalog="system" width="64" height="60"/>

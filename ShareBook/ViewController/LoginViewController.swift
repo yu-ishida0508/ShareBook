@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
 //MARK: - アカウント作成ボタンをタップしたときに呼ばれるメソッド
 //MARK:  E-mail:「@」必要、Pass:6文字以上
     @IBAction func handleCreateAccountButton(_ sender: Any) {
-    if let address = mailAddressTextField.text, let password = passwordTextField.text, let displayName = displayNameTextField.text {
+        if let address = mailAddressTextField.text, let password = passwordTextField.text, let displayName = displayNameTextField.text {
 
             // アドレスとパスワードと表示名のいずれかでも入力されていない時は何もしない
             if address.isEmpty || password.isEmpty || displayName.isEmpty {
@@ -75,8 +75,20 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
-    
+//MARK: - パスワード再設定（遷移先→遷移元用）
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+//MARK: - パスワード再設定先(ResetPassViewController)へ遷移
+//MARK:  TODO:パスワード再設定先(ResetPassViewController)へデータ渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResetPassViewControllerを取得する
+//        let resetPassView:ResetPassViewController = segue.destination as! ResetPassViewController
+        
+        // 遷移先のResetPassViewControllerで宣言しているaddressに値を代入して渡す
+//        resetPassView.resetMailAddressTextField.text = self.mailAddressTextField.text!
+//        resetPassView.resetMailAddressTextField.text = "1234"
+    }
+//MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
 

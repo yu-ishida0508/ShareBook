@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		62BC9BA3246E5DE800799BBD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA2246E5DE800799BBD /* FavoriteViewController.swift */; };
 		62BC9BA6246E663600799BBD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA5246E663600799BBD /* TabBarController.swift */; };
 		62BC9BA8246E66AC00799BBD /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA7246E66AC00799BBD /* UIColor-Extension.swift */; };
+		62F743E624705F26003701D4 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F743E524705F26003701D4 /* ResetPassViewController.swift */; };
 		62FE1999246FD32B0085DBA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62FE1998246FD32B0085DBA4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		62BC9BA2246E5DE800799BBD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		62BC9BA5246E663600799BBD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		62BC9BA7246E66AC00799BBD /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		62F743E524705F26003701D4 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		62FE1998246FD32B0085DBA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87F16B0C3E912E4B8286E107 /* Pods_ShareBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,7 +68,6 @@
 				2073D018A389341E9EC14EAC /* Pods-ShareBook.debug.xcconfig */,
 				4764F80B347305C7D067887B /* Pods-ShareBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -92,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				62BC9B94246E5ACE00799BBD /* StoryBoard */,
-				62BC9B95246E5B2800799BBD /* ViewController */,
 				62BC9BA4246E658D00799BBD /* BarController */,
+				62BC9B95246E5B2800799BBD /* ViewController */,
 				62BC9B82246E5A1600799BBD /* SceneDelegate.swift */,
 				62BC9B80246E5A1600799BBD /* AppDelegate.swift */,
 				62BC9BA7246E66AC00799BBD /* UIColor-Extension.swift */,
@@ -117,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				62BC9B96246E5B5D00799BBD /* LoginViewController.swift */,
+				62F743E524705F26003701D4 /* ResetPassViewController.swift */,
 				62BC9B98246E5B7900799BBD /* HomeViewController.swift */,
 				62BC9B9C246E5BAF00799BBD /* PostViewController.swift */,
 				62BC9B9A246E5B9D00799BBD /* ImageSelectViewController.swift */,
@@ -268,6 +270,7 @@
 				62BC9B97246E5B5D00799BBD /* LoginViewController.swift in Sources */,
 				62BC9BA1246E5BE600799BBD /* NewsViewController.swift in Sources */,
 				62BC9B81246E5A1600799BBD /* AppDelegate.swift in Sources */,
+				62F743E624705F26003701D4 /* ResetPassViewController.swift in Sources */,
 				62BC9B83246E5A1600799BBD /* SceneDelegate.swift in Sources */,
 				62BC9BA8246E66AC00799BBD /* UIColor-Extension.swift in Sources */,
 			);
