@@ -17,17 +17,14 @@ class ResetPassViewController: UIViewController {
     @IBAction func sendButton(_ sender: Any) {
         
         if let address = resetMailAddressTextField.text {
-            // パスワードが入力されていない時は何もしない
+            // アドレスが入力されていない時は何もしない
             if address.isEmpty {
                 print("DEBUG_PRINT: アドレスが未入力です。")
                 return
             }
             
-            
-            
-            
-        }
-        
+          //日本語化
+            Auth.auth().languageCode = "jp"
             // 送信先のメールアドレスを取得
             let address = resetMailAddressTextField.text!
                // 取得したメールアドレスを引数に渡す
@@ -35,12 +32,18 @@ class ResetPassViewController: UIViewController {
                    if error == nil {
                     // エラーが無ければ、パスワード再設定用のメールが指定したメールアドレスまで送信される。
                     // 届いたメールからパスワード再設定後、新しいパスワードでログインする事が出来る。
-                       self.performSegue(withIdentifier: "GoToLoginScreen", sender: nil)
+                    //loginVCへ画面切替え
+                    let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                    self.present(loginViewController!, animated: true, completion: nil) //画面切り替え
+                    
                    }else{
                        print("エラー：\(String(describing: error?.localizedDescription))")
                    }
                }
     }
+}
+    
+//MARK: -
     
     override func viewDidLoad() {
         super.viewDidLoad()
