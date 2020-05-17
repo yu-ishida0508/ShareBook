@@ -65,6 +65,10 @@ class ResetPassViewController: UIViewController {
                }
     }
 }
+//MARK: -　画面外をタップでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
 //MARK: -
     

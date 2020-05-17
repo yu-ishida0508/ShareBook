@@ -14,6 +14,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var resetMailAddressTextField: UITextField!
     
+    
 //MARK: - ユーザ名変更
     @IBAction func handleChangeButton(_ sender: Any) {
  
@@ -186,13 +187,22 @@ class SettingViewController: UIViewController {
                         present(alert, animated: true, completion: nil)
         
     }
-    
+//MARK: -　画面外をタップでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+//MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+//MARK: - 画面切り替え都度読み込み
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         // 表示名を取得してTextFieldに設定する
         let user = Auth.auth().currentUser
         if let user = user {
             displayNameTextField.text = user.displayName
-        }
+            }
     }
 }

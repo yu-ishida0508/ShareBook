@@ -146,7 +146,13 @@ class LoginViewController: UIViewController {
 //        resetPassView.resetMailAddressTextField.text = self.mailAddressTextField.text!
 //        resetPassView.resetMailAddressTextField.text = "1234"
     }
-//MARK: -
+//MARK: -　画面外をタップでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+//MARK: -　
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
