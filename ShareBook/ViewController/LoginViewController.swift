@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
     @IBAction func handleCreateAccountButton(_ sender: Any) {
         if let address = mailAddressTextField.text, let password = passwordTextField.text, let displayName = displayNameTextField.text {
 
-            // アドレスとパスワードと表示名のいずれかでも入力されていない時は何もしない
+            // アドレスとパスワードとユーザ名のいずれかでも入力されていない時は何もしない
             if address.isEmpty || password.isEmpty || displayName.isEmpty {
                 print("DEBUG_PRINT: 何かが空文字です。")
                 SVProgressHUD.showError(withStatus: "必要項目を入力して下さい")
@@ -101,8 +101,8 @@ class LoginViewController: UIViewController {
                 }
                 print("DEBUG_PRINT: ユーザー作成に成功しました。")
 
-//MARK: 表示名を設定
-                // 表示名を設定する
+//MARK: ユーザ名を設定
+                // ユーザ名を設定する
                 let user = Auth.auth().currentUser
                 if let user = user {
                     let changeRequest = user.createProfileChangeRequest()
