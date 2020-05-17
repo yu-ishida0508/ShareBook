@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class ResetPassViewController: UIViewController {
     
@@ -20,11 +21,20 @@ class ResetPassViewController: UIViewController {
             // アドレスが入力されていない時は何もしない
             if address.isEmpty {
                 print("DEBUG_PRINT: アドレスが未入力です。")
+                
+                SVProgressHUD.showError(withStatus: "アドレスを入力してください。")
+                //DispatchQueue.main.asyncAfter記述後の処理は1.5秒後に実行
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                 SVProgressHUD.dismiss()
+                }
+                
                 return
             }
             
-          //日本語化
-            Auth.auth().languageCode = "jp"
+//TODO:-    メールの日本語化(Auth.auth().languageCode = "jp")
+            
+            // HUDで処理中を表示
+            SVProgressHUD.show()
             // 送信先のメールアドレスを取得
             let address = resetMailAddressTextField.text!
                // 取得したメールアドレスを引数に渡す
@@ -32,12 +42,25 @@ class ResetPassViewController: UIViewController {
                    if error == nil {
                     // エラーが無ければ、パスワード再設定用のメールが指定したメールアドレスまで送信される。
                     // 届いたメールからパスワード再設定後、新しいパスワードでログインする事が出来る。
-                    //loginVCへ画面切替え
-                    let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
-                    self.present(loginViewController!, animated: true, completion: nil) //画面切り替え
+                    SVProgressHUD.showSuccess(withStatus: "メールを送信しました。")
+                   
+
+                    //DispatchQueue.main.asyncAfter記述後の処理は1.0秒後に実行
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                     SVProgressHUD.dismiss() // HUDを消す
+                        //loginVCへ画面切替え
+                        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                        self.present(loginViewController!, animated: true, completion: nil) //画面切り替え
+                    }
                     
                    }else{
                        print("エラー：\(String(describing: error?.localizedDescription))")
+                    
+                        SVProgressHUD.showError(withStatus: "メールの送信に失敗しました。")
+                        //DispatchQueue.main.asyncAfter記述後の処理は1.5秒後に実行
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                         SVProgressHUD.dismiss()
+                        }
                    }
                }
     }
