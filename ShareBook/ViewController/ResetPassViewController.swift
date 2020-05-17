@@ -14,7 +14,7 @@ class ResetPassViewController: UIViewController {
     
     @IBOutlet weak var resetMailAddressTextField: UITextField!
     
-    //パスワード失念時のメール送信
+//MARK: - パスワード失念時のメール送信(SettingVCと同じ内容のため、修正時は要確認)
     @IBAction func sendButton(_ sender: Any) {
         
         if let address = resetMailAddressTextField.text {
