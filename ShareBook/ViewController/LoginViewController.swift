@@ -71,6 +71,19 @@ class LoginViewController: UIViewController {
                 }
                 return
             }
+            
+            // パスワードが6桁未満であれば何もしない
+            if password.count < 6 {
+                print("DEBUG_PRINT: パスワード６桁未満")
+                SVProgressHUD.showInfo(withStatus:"パスワードは６桁以上を入力して下さい")
+                //DispatchQueue.main.asyncAfter記述後の処理は1.5秒後に実行
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                 SVProgressHUD.dismiss()
+                }
+                return
+            }
+            
+            
             // HUDで処理中を表示
             SVProgressHUD.show()
 
