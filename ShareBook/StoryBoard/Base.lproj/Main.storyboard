@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svu-oO-Qoa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svu-oO-Qoa">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,13 +30,81 @@
                     <view key="view" contentMode="scaleToFill" id="W4e-S4-vit">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Gw-WU-Lgg">
+                                <rect key="frame" x="10" y="59" width="355" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="k2S-XW-MWl"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="読んで欲しい人に一言" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6CX-0h-1x4">
+                                <rect key="frame" x="65" y="332" width="300" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AE3-vm-Gly"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzV-iD-vUd">
+                                <rect key="frame" x="37.666666666666657" y="502" width="300" height="40"/>
+                                <state key="normal" title="投稿" backgroundImage="settingBarButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="Ipb-3m-Dea" eventType="touchUpInside" id="eGH-oA-LXU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSp-N2-d7o">
+                                <rect key="frame" x="37.666666666666657" y="552" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qR2-ZQ-Use"/>
+                                </constraints>
+                                <state key="normal" title="戻る" backgroundImage="settingBarButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="Ipb-3m-Dea" eventType="touchUpInside" id="PI7-4O-9E6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="作者名（未入力可）" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-mk-9XH">
+                                <rect key="frame" x="165" y="278" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Cek-um-IBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Gw-WU-Lgg" firstAttribute="trailing" secondItem="5KM-mk-9XH" secondAttribute="trailing" id="5gd-El-4Qs"/>
+                            <constraint firstItem="6CX-0h-1x4" firstAttribute="leading" secondItem="Njt-kq-9Mw" secondAttribute="leading" constant="65" id="9Tx-zE-WEZ"/>
+                            <constraint firstItem="2Gw-WU-Lgg" firstAttribute="top" secondItem="Njt-kq-9Mw" secondAttribute="top" constant="15" id="Djb-Gb-zJs"/>
+                            <constraint firstItem="2Gw-WU-Lgg" firstAttribute="trailing" secondItem="6CX-0h-1x4" secondAttribute="trailing" id="NFR-C1-zY1"/>
+                            <constraint firstItem="pSp-N2-d7o" firstAttribute="top" secondItem="EzV-iD-vUd" secondAttribute="bottom" constant="10" id="Vwo-vP-2Hz"/>
+                            <constraint firstItem="2Gw-WU-Lgg" firstAttribute="centerX" secondItem="EzV-iD-vUd" secondAttribute="centerX" id="XGg-Oo-tG6"/>
+                            <constraint firstItem="2Gw-WU-Lgg" firstAttribute="centerX" secondItem="pSp-N2-d7o" secondAttribute="centerX" id="XM5-Cj-WnU"/>
+                            <constraint firstItem="6CX-0h-1x4" firstAttribute="top" secondItem="5KM-mk-9XH" secondAttribute="bottom" constant="20" id="die-38-Wuy"/>
+                            <constraint firstItem="5KM-mk-9XH" firstAttribute="trailing" secondItem="2Gw-WU-Lgg" secondAttribute="trailing" id="f9E-7i-8Pi"/>
+                            <constraint firstItem="Njt-kq-9Mw" firstAttribute="trailing" secondItem="2Gw-WU-Lgg" secondAttribute="trailing" constant="10" id="g4o-ct-6bB"/>
+                            <constraint firstItem="2Gw-WU-Lgg" firstAttribute="leading" secondItem="Njt-kq-9Mw" secondAttribute="leading" constant="10" id="l8k-Xc-7BC"/>
+                            <constraint firstItem="5KM-mk-9XH" firstAttribute="top" secondItem="2Gw-WU-Lgg" secondAttribute="bottom" constant="16" id="qVt-rd-71y"/>
+                            <constraint firstItem="EzV-iD-vUd" firstAttribute="top" secondItem="6CX-0h-1x4" secondAttribute="bottom" constant="42" id="rtf-yH-W0S"/>
+                            <constraint firstItem="6CX-0h-1x4" firstAttribute="trailing" secondItem="2Gw-WU-Lgg" secondAttribute="trailing" id="wxj-Ch-kAk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Njt-kq-9Mw"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="2Gw-WU-Lgg" id="ET5-3D-CRF"/>
+                        <outlet property="textField" destination="5KM-mk-9XH" id="Btq-GW-Ui0"/>
+                        <outlet property="textView" destination="6CX-0h-1x4" id="vcq-yf-eZ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpz-f6-c8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="1521"/>
+            <point key="canvasLocation" x="-18.399999999999999" y="1520.6896551724139"/>
         </scene>
         <!--設定-->
         <scene sceneID="CpA-6O-RI5">
@@ -269,7 +337,53 @@
                     <view key="view" contentMode="scaleToFill" id="diK-5m-GJC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7In-ri-8Ll">
+                                <rect key="frame" x="37.666666666666657" y="124" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sYC-jm-fSq"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリ" backgroundImage="settingBarButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="hbB-Rl-ver" eventType="touchUpInside" id="bco-km-lv8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMI-ci-wLr">
+                                <rect key="frame" x="37.666666666666657" y="224" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="qLo-wR-p9X"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="settingBarButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="hbB-Rl-ver" eventType="touchUpInside" id="70l-Gy-FlT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-lW-YnR">
+                                <rect key="frame" x="37.666666666666657" y="174" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="lzT-eY-E4k"/>
+                                </constraints>
+                                <state key="normal" title="カメラ" backgroundImage="settingBarButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="hbB-Rl-ver" eventType="touchUpInside" id="h1h-AG-PFj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7In-ri-8Ll" firstAttribute="centerX" secondItem="diK-5m-GJC" secondAttribute="centerX" id="9Lm-Vc-CrU"/>
+                            <constraint firstItem="XMI-ci-wLr" firstAttribute="top" secondItem="hfZ-lW-YnR" secondAttribute="bottom" constant="10" id="IX0-dd-UyE"/>
+                            <constraint firstItem="hfZ-lW-YnR" firstAttribute="top" secondItem="7In-ri-8Ll" secondAttribute="bottom" constant="10" id="M69-Bm-yD7"/>
+                            <constraint firstItem="7In-ri-8Ll" firstAttribute="top" secondItem="Up6-XD-A04" secondAttribute="top" constant="80" id="MEf-yz-4Xa"/>
+                            <constraint firstItem="XMI-ci-wLr" firstAttribute="centerX" secondItem="diK-5m-GJC" secondAttribute="centerX" id="uo1-X0-E0n"/>
+                            <constraint firstItem="hfZ-lW-YnR" firstAttribute="centerX" secondItem="diK-5m-GJC" secondAttribute="centerX" id="y03-NJ-Ysx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Up6-XD-A04"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="投稿" image="paperplane" catalog="system" id="siv-jf-NUX"/>
@@ -572,12 +686,12 @@
         <image name="Rectangle" width="300" height="40"/>
         <image name="ResetPass" width="1017" height="903"/>
         <image name="ResetPassBar" width="300" height="40"/>
-        <image name="exclamationmark.bubble" catalog="system" width="64" height="54"/>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="paperplane" catalog="system" width="64" height="60"/>
+        <image name="exclamationmark.bubble" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="paperplane" catalog="system" width="128" height="121"/>
         <image name="setting" width="25" height="25"/>
         <image name="settingBar" width="300" height="20"/>
         <image name="settingBarButton" width="300" height="40"/>
-        <image name="star" catalog="system" width="64" height="58"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>
