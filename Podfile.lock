@@ -153,6 +153,7 @@ PODS:
     - SDWebImage/Core (= 5.7.4)
   - SDWebImage/Core (5.7.4)
   - SVProgressHUD (2.2.5)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - CLImageEditor/AllTools (= 0.2.4)
@@ -163,6 +164,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Storage
   - SVProgressHUD (= 2.2.5)
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
@@ -192,6 +194,7 @@ SPEC REPOS:
     - Protobuf
     - SDWebImage
     - SVProgressHUD
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -220,7 +223,8 @@ SPEC CHECKSUMS:
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: fc6ad2b28612cf243541123acdc075b5d80f2b66
+PODFILE CHECKSUM: 648f60649056c53bf084a7915ae45a38739308df
 
 COCOAPODS: 1.8.4
