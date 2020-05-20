@@ -18,6 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="amt-MC-OTt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="avF-9f-3Eo"/>
+                    <navigationItem key="navigationItem" id="tX3-FJ-3tS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Hx-ny-bTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,6 +388,7 @@
                         <viewLayoutGuide key="safeArea" id="Up6-XD-A04"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="投稿" image="paperplane" catalog="system" id="siv-jf-NUX"/>
+                    <navigationItem key="navigationItem" id="F2Z-aB-g8m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIK-L1-fbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

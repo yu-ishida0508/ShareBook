@@ -19,7 +19,7 @@ class PostViewController: UIViewController {
     //読んで欲しい人へ
     @IBOutlet weak var textView: UITextView!
     
-    // 投稿ボタンをタップしたときに呼ばれるメソッド
+//MARK:- 投稿ボタンをタップしたときに呼ばれるメソッド
     @IBAction func handlePostButton(_ sender: Any) {
         // 画像をJPEG形式に変換する
         let imageData = image.jpegData(compressionQuality: 0.75)
@@ -38,46 +38,56 @@ class PostViewController: UIViewController {
                 SVProgressHUD.showError(withStatus: "画像のアップロードが失敗しました")
                 // 投稿処理をキャンセルし、先頭画面に戻る
                 UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+                //DispatchQueue.main.asyncAfter記述後の処理は1.5秒後に実行
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                 SVProgressHUD.dismiss()
+                }
                 return
             }
             // FireStoreに投稿データを保存する
             let name = Auth.auth().currentUser?.displayName
+            let uid = Auth.auth().currentUser?.uid
+            let email = Auth.auth().currentUser?.email
             let postDic = [
-                "name": name!,
-                "caption": self.textField.text!,
+                "name": name!,                       //投稿者名
+                "writer": self.textField.text!,     //作者名
+                "feelings": self.textView.text!,     //コメント
                 "date": FieldValue.serverTimestamp(),
+                "uid": uid!,//ユーザID
+                "e-mail": email!,//ユーザe-mail
                 ] as [String : Any]
             postRef.setData(postDic)
             // HUDで投稿完了を表示する
             SVProgressHUD.showSuccess(withStatus: "投稿しました")
             // 投稿処理が完了したので先頭画面に戻る
            UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+            //DispatchQueue.main.asyncAfter記述後の処理は1.5秒後に実行
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+             SVProgressHUD.dismiss()
+            }
         }
     }
-    // キャンセルボタンをタップしたときに呼ばれるメソッド
+//MARK:- キャンセルボタンをタップしたときに呼ばれるメソッド
     @IBAction func handleCancelButton(_ sender: Any) {
-
-        // 前の画面に戻る
-               self.dismiss(animated: true, completion: nil)
+        // 加工画面に戻る
+        self.dismiss(animated: true, completion: nil)
+        
+//        //モーダル
+//        let imageSelectViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageSelect") as! ImageSelectViewController
+//        self.present(imageSelectViewController, animated: true, completion: nil)
+//        // 前の画面に戻る
+//               self.dismiss(animated: true, completion: nil)
     }
-    
-    
+
+    //MARK: -　画面外をタップでキーボードを閉じる
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+//MARK:-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // 受け取った画像をImageViewに設定する
         imageView.image = image
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
