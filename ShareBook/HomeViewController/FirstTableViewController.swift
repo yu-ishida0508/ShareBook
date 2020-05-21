@@ -34,6 +34,9 @@ class FirstTableViewController: UITableViewController {
 extension FirstTableViewController : IndicatorInfoProvider {
     //サブタイトル
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "item One")
+//        return IndicatorInfo(title: "item One")
+//        return IndicatorInfo(title: " HOME", image: UIImage(named: "home"))
+        return IndicatorInfo(image: UIImage(named: "home"))
+        
     }
 }

@@ -10,7 +10,6 @@ import UIKit
 import XLPagerTabStrip
 
 class ThirdTableViewController: UITableViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +31,8 @@ class ThirdTableViewController: UITableViewController {
 extension ThirdTableViewController : IndicatorInfoProvider {
     //サブタイトル
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "item Three")
+//        return IndicatorInfo(title: " ACCOUNT", image: UIImage(named: "profile"))
+        return IndicatorInfo(image: UIImage(named: "profile"))
     }
+
 }

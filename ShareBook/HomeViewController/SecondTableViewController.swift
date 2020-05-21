@@ -32,7 +32,9 @@ class SecondTableViewController: UITableViewController {
 extension SecondTableViewController : IndicatorInfoProvider {
     //サブタイトル
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "item Two")
+//        return IndicatorInfo(title: " TRENDING", image: UIImage(named: "trending"))
+        return IndicatorInfo(image: UIImage(named: "trending"))
+        
     }
 }
 
