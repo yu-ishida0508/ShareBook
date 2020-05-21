@@ -15,12 +15,11 @@ class TableViewCellOne: UITableViewCell {
     @IBOutlet weak var writerLable: UILabel!       //著者
     @IBOutlet weak var dateLabel: UILabel!       //日付
     @IBOutlet weak var likeLabel: UILabel!       //いいね数
+    @IBOutlet weak var likeButton: UIButton!    //いいねボタンはouteletで繋ぐ
     
-    //いいねボタン
-    @IBAction func likeButton(_ sender: Any) {
-    }
+    
     //いいねボタンのインスタンス化
-    let likeButton = UIButton()
+//    let likeButton = UIButton()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,6 +67,7 @@ class TableViewCellOne: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
         }
+        
     }
 
 }

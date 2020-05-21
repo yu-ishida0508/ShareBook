@@ -19,7 +19,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
 
     }
     
-    
+//MARK:-youtube模範のTabBAR
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let child_1 = UIStoryboard(name:"Main",bundle:nil).instantiateViewController(withIdentifier: "TableOne")
         let child_2 = UIStoryboard(name:"Main",bundle:nil).instantiateViewController(withIdentifier: "TableTwo")
@@ -47,9 +47,9 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
                 
             }
         
-        super.viewDidLoad()
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        super.viewDidLoad()
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
     }
 //MARK: - 謎メソッド無くても動く

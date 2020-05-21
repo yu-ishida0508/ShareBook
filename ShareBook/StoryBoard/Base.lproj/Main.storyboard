@@ -162,9 +162,6 @@
                                                 <constraint firstAttribute="width" constant="40" id="82p-Yc-IoY"/>
                                             </constraints>
                                             <state key="normal" title="Button" image="like_none"/>
-                                            <connections>
-                                                <action selector="likeButton:" destination="hCH-oR-4wh" eventType="touchUpInside" id="nxa-58-Cap"/>
-                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いいね数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yS-8U-MdM">
                                             <rect key="frame" x="296" y="60" width="58" height="17"/>
@@ -192,6 +189,7 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="IUn-mt-7FQ" id="Ow0-ST-CW5"/>
                                     <outlet property="feelingLabel" destination="BeK-yJ-FSk" id="BrD-ee-Xsr"/>
+                                    <outlet property="likeButton" destination="ySb-MP-wse" id="wbr-Pt-KF6"/>
                                     <outlet property="likeLabel" destination="1yS-8U-MdM" id="Syw-QJ-yHS"/>
                                     <outlet property="postImageView" destination="Xbf-l0-rfI" id="F5h-fh-jkj"/>
                                     <outlet property="writerLable" destination="bmJ-gq-Xht" id="hjO-tc-X0r"/>

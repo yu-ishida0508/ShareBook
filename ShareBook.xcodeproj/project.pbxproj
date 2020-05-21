@@ -18,7 +18,6 @@
 		62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D57247676E6003DE5B8 /* PostData.swift */; };
 		62AC3D5B247678E4003DE5B8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D59247678E4003DE5B8 /* PostTableViewCell.swift */; };
 		62AC3D5C247678E4003DE5B8 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62AC3D5A247678E4003DE5B8 /* PostTableViewCell.xib */; };
-		62AC3D5F24767A0B003DE5B8 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D5E24767A0A003DE5B8 /* ChatListViewController.swift */; };
 		62BC9B81246E5A1600799BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B80246E5A1600799BBD /* AppDelegate.swift */; };
 		62BC9B83246E5A1600799BBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B82246E5A1600799BBD /* SceneDelegate.swift */; };
 		62BC9B88246E5A1600799BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BC9B86246E5A1600799BBD /* Main.storyboard */; };
@@ -50,7 +49,6 @@
 		62AC3D57247676E6003DE5B8 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		62AC3D59247678E4003DE5B8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		62AC3D5A247678E4003DE5B8 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
-		62AC3D5E24767A0A003DE5B8 /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		62BC9B7D246E5A1600799BBD /* ShareBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BC9B80246E5A1600799BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BC9B82246E5A1600799BBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				62AC3D4024753297003DE5B8 /* TableViewCellOne.swift */,
 				62AC3D42247532AD003DE5B8 /* TableViewCellTwo.swift */,
 				62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */,
-				62AC3D5E24767A0A003DE5B8 /* ChatListViewController.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -315,7 +312,6 @@
 				62AC3D43247532AD003DE5B8 /* TableViewCellTwo.swift in Sources */,
 				62AC3D4124753297003DE5B8 /* TableViewCellOne.swift in Sources */,
 				62AC3D2724751CD5003DE5B8 /* FirstTableViewController.swift in Sources */,
-				62AC3D5F24767A0B003DE5B8 /* ChatListViewController.swift in Sources */,
 				62BC9B9B246E5B9D00799BBD /* ImageSelectViewController.swift in Sources */,
 				62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */,
 				62AC3D2B24751CF2003DE5B8 /* ThridTableViewController.swift in Sources */,
