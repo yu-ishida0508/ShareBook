@@ -11,6 +11,7 @@ import XLPagerTabStrip //追加
 
 //修正
 class HomeViewController: ButtonBarPagerTabStripViewController {
+    
 
     override func viewDidLoad() {
         self.loadDesign()
@@ -51,7 +52,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
     }
-    
+//MARK: - 謎メソッド無くても動く
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) {
         super.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex, withProgressPercentage: progressPercentage, indexWasChanged: indexWasChanged)
         if indexWasChanged && toIndex > -1 && toIndex < viewControllers.count {
@@ -62,6 +63,8 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             })
         }
     }
+//MARK: -
+
 
     }
 
