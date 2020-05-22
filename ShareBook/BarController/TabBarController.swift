@@ -35,7 +35,7 @@ class TabBarController: UITabBarController,UITabBarControllerDelegate {
         
     }
 
-        // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
+//MARK:-  タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する。
         func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
             if viewController is ImageSelectViewController {
                 // ImageSelectViewControllerは、タブ切り替えではなくモーダル画面遷移する

@@ -47,10 +47,6 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
                 
             }
         
-//        super.viewDidLoad()
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        
     }
 //MARK: - 謎メソッド無くても動く
     override func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) {

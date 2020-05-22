@@ -11,15 +11,12 @@ import FirebaseUI
 
 class TableViewCellOne: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView! //投稿画像
-    @IBOutlet weak var feelingLabel:UILabel!       //感想
+    @IBOutlet weak var feelingTextView: UITextView!//感想
     @IBOutlet weak var writerLable: UILabel!       //著者
     @IBOutlet weak var dateLabel: UILabel!       //日付
     @IBOutlet weak var likeLabel: UILabel!       //いいね数
     @IBOutlet weak var likeButton: UIButton!    //いいねボタンはouteletで繋ぐ
     
-    
-    //いいねボタンのインスタンス化
-//    let likeButton = UIButton()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +29,7 @@ class TableViewCellOne: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
     
 //MARK: - PostDataの内容をセルに表示
     func setPostData(_ postData: PostData) {
@@ -41,7 +39,7 @@ class TableViewCellOne: UITableViewCell {
         postImageView.sd_setImage(with: imageRef)
 
         // 感想の表示
-        self.feelingLabel.text = "\(postData.feelings!)"
+        self.feelingTextView.text = "\(postData.feelings!)"
         
         // 作者の表示
         self.writerLable.text = "\(postData.writer!)"

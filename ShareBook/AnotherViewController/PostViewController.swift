@@ -71,12 +71,7 @@ class PostViewController: UIViewController {
     @IBAction func handleCancelButton(_ sender: Any) {
         // 加工画面に戻る
         self.dismiss(animated: true, completion: nil)
-        
-//        //モーダル
-//        let imageSelectViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageSelect") as! ImageSelectViewController
-//        self.present(imageSelectViewController, animated: true, completion: nil)
-//        // 前の画面に戻る
-//               self.dismiss(animated: true, completion: nil)
+ 
     }
 
     //MARK: -　画面外をタップでキーボードを閉じる
@@ -86,8 +81,12 @@ class PostViewController: UIViewController {
 //MARK:-
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // 受け取った画像をImageViewに設定する
         imageView.image = image
+        
+        //それぞれViewの角を丸く
+        imageView.layer.cornerRadius = 10
+        textView.layer.cornerRadius = 10
+        
     }
 }

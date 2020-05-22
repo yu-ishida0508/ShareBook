@@ -24,7 +24,6 @@ class FirstTableViewController: UITableViewController{
         super.viewDidLoad()
         firstTableView.delegate = self
         firstTableView.dataSource = self
-
     }
 //MARK:-表示データの読み込み
     override func viewWillAppear(_ animated: Bool) {
@@ -81,9 +80,29 @@ class FirstTableViewController: UITableViewController{
 
         return cell
     }
-    //行間の幅
+//MARK:- 行間の幅
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+//MARK: - セルをタップした時の処理(画面切り替え)...画像とコメントを表示する
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("test")
+        
+        //FirstChildVCのインスタンス取得
+        let firstTableChildViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableOneChild") as! FirstChildViewController
+    
+//MARK: - ここの記述が困っています
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath.row]
+        
+        //遷移先のプロパティ(postData)に情報セット
+        firstTableChildViewController.postData = postData
+        
+        //データ引き渡しと画面切り替え
+        self.present(firstTableChildViewController, animated: true, completion: nil) //画面切り替え
+        
+
     }
     
 //MARK:- セル内のボタンがタップされた時に呼ばれるメソッド
@@ -118,10 +137,8 @@ class FirstTableViewController: UITableViewController{
 
 }
 extension FirstTableViewController : IndicatorInfoProvider {
-    //サブタイトル
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-//        return IndicatorInfo(title: "item One")
-//        return IndicatorInfo(title: " HOME", image: UIImage(named: "home"))
+    //TabBarサブタイトル
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {//        return IndicatorInfo(title: " HOME", image: UIImage(named: "home"))
         return IndicatorInfo(image: UIImage(named: "home"))
         
     }
