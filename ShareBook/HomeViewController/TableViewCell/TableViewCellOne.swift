@@ -22,6 +22,8 @@ class TableViewCellOne: UITableViewCell {
         super.awakeFromNib()
         //ImageViewのを丸くする。長さの半分を設定値にする
         postImageView.layer.cornerRadius = 35
+        feelingTextView.layer.cornerRadius = 10
+        backgroundColor = .clear //背景色(透明)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +31,7 @@ class TableViewCellOne: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
     
 //MARK: - PostDataの内容をセルに表示

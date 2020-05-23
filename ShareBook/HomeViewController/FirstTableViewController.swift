@@ -24,6 +24,7 @@ class FirstTableViewController: UITableViewController{
         super.viewDidLoad()
         firstTableView.delegate = self
         firstTableView.dataSource = self
+        firstTableView.backgroundColor = .rgb(red: 240, green: 240, blue: 240)
     }
 //MARK:-表示データの読み込み
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +83,9 @@ class FirstTableViewController: UITableViewController{
     }
 //MARK:- 行間の幅
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        //最低の行の高さ
+        firstTableView.estimatedRowHeight = 20
+        return UITableView.automaticDimension //自動的に高さ設定
     }
     
 //MARK: - セルをタップした時の処理(画面切り替え)...画像とコメントを表示する

@@ -21,6 +21,23 @@ class PostViewController: UIViewController {
     
 //MARK:- 投稿ボタンをタップしたときに呼ばれるメソッド
     @IBAction func handlePostButton(_ sender: Any) {
+        
+        print("DEBUG_PRINT: 投稿ボタンを押下しました")
+            //テキスト未入力時には何も返さない
+            guard let addComment = textView.text else{
+                   return //textView.text nilならここ
+            }
+            if addComment.isEmpty{
+                   SVProgressHUD.showError(withStatus: "コメントを入力して下さい")
+                   //呼び出しクラスに何もないことを返却(return)する
+                // HUDを消す
+                //DispatchQueue.main.asyncAfter記述後の処理は1.0秒後に実行
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                 SVProgressHUD.dismiss()
+                }
+                   return
+               }
+        
         // 画像をJPEG形式に変換する
         let imageData = image.jpegData(compressionQuality: 0.75)
         // 画像と投稿データの保存場所を定義する

@@ -14,7 +14,7 @@ class FirstChildViewController: UIViewController {
     @IBOutlet weak var writerLabel: UILabel!  //作者名
     @IBOutlet weak var nameLabel: UILabel!   //投稿者
     @IBOutlet weak var feelingTextView: UITextView! //感想
-
+    
     var postData:PostData!
    
 //Firebaseに登録している画像表示
@@ -37,6 +37,9 @@ func setPostData(_ postData: PostData) {
         //それぞれのViewの角を丸くする
         imageView.layer.cornerRadius = 10
         feelingTextView.layer.cornerRadius = 10
+        
+ 
+
 
     }
     //戻るボタン
