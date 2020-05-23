@@ -104,7 +104,6 @@ class ThirdTableViewController: UITableViewController {
             
             //データ引き渡しと画面切り替え
             self.present(childViewController, animated: true, completion: nil) //画面切り替え
-            
 
         }
         
