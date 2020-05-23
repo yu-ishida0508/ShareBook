@@ -16,7 +16,7 @@
 		62AC3D43247532AD003DE5B8 /* TableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D42247532AD003DE5B8 /* TableViewCellTwo.swift */; };
 		62AC3D45247532B9003DE5B8 /* TableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */; };
 		62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D57247676E6003DE5B8 /* PostData.swift */; };
-		62AC3D652476D793003DE5B8 /* FirstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D642476D792003DE5B8 /* FirstChildViewController.swift */; };
+		62BA2C23247915060053182A /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C22247915060053182A /* ChildViewController.swift */; };
 		62BC9B81246E5A1600799BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B80246E5A1600799BBD /* AppDelegate.swift */; };
 		62BC9B83246E5A1600799BBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B82246E5A1600799BBD /* SceneDelegate.swift */; };
 		62BC9B88246E5A1600799BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BC9B86246E5A1600799BBD /* Main.storyboard */; };
@@ -46,7 +46,7 @@
 		62AC3D42247532AD003DE5B8 /* TableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellTwo.swift; sourceTree = "<group>"; };
 		62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellThree.swift; sourceTree = "<group>"; };
 		62AC3D57247676E6003DE5B8 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
-		62AC3D642476D792003DE5B8 /* FirstChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChildViewController.swift; sourceTree = "<group>"; };
+		62BA2C22247915060053182A /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		62BC9B7D246E5A1600799BBD /* ShareBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BC9B80246E5A1600799BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BC9B82246E5A1600799BBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,9 +94,9 @@
 			children = (
 				62BC9B98246E5B7900799BBD /* HomeViewController.swift */,
 				62AC3D2624751CD5003DE5B8 /* FirstTableViewController.swift */,
-				62AC3D642476D792003DE5B8 /* FirstChildViewController.swift */,
 				62AC3D2824751CE3003DE5B8 /* SecondTableViewController.swift */,
 				62AC3D2A24751CF2003DE5B8 /* ThridTableViewController.swift */,
+				62BA2C22247915060053182A /* ChildViewController.swift */,
 				62AC3D4024753297003DE5B8 /* TableViewCellOne.swift */,
 				62AC3D42247532AD003DE5B8 /* TableViewCellTwo.swift */,
 				62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */,
@@ -300,7 +300,6 @@
 				62AC3D43247532AD003DE5B8 /* TableViewCellTwo.swift in Sources */,
 				62AC3D4124753297003DE5B8 /* TableViewCellOne.swift in Sources */,
 				62AC3D2724751CD5003DE5B8 /* FirstTableViewController.swift in Sources */,
-				62AC3D652476D793003DE5B8 /* FirstChildViewController.swift in Sources */,
 				62BC9B9B246E5B9D00799BBD /* ImageSelectViewController.swift in Sources */,
 				62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */,
 				62AC3D2B24751CF2003DE5B8 /* ThridTableViewController.swift in Sources */,
@@ -309,6 +308,7 @@
 				62BC9BA6246E663600799BBD /* TabBarController.swift in Sources */,
 				62AC3D45247532B9003DE5B8 /* TableViewCellThree.swift in Sources */,
 				62BC9B9F246E5BD600799BBD /* SettingViewController.swift in Sources */,
+				62BA2C23247915060053182A /* ChildViewController.swift in Sources */,
 				62BC9BA3246E5DE800799BBD /* FavoriteViewController.swift in Sources */,
 				62BC9B97246E5B5D00799BBD /* LoginViewController.swift in Sources */,
 				62BC9BA1246E5BE600799BBD /* NewsViewController.swift in Sources */,

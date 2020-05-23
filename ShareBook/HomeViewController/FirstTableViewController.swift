@@ -93,17 +93,17 @@ class FirstTableViewController: UITableViewController{
         print("test")
         
         //FirstChildVCのインスタンス取得
-        let firstTableChildViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableOneChild") as! FirstChildViewController
+        let childViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableOneChild") as! ChildViewController
     
 //MARK: - 子ビューへの引き渡し
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath.row]
         
         //遷移先のプロパティ(postData)に情報セット
-        firstTableChildViewController.postData = postData
+        childViewController.postData = postData
         
         //データ引き渡しと画面切り替え
-        self.present(firstTableChildViewController, animated: true, completion: nil) //画面切り替え
+        self.present(childViewController, animated: true, completion: nil) //画面切り替え
         
 
     }

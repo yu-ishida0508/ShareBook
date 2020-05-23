@@ -365,10 +365,10 @@
             </objects>
             <point key="canvasLocation" x="-2740" y="1501"/>
         </scene>
-        <!--First Child View Controller-->
+        <!--Child View Controller-->
         <scene sceneID="BM5-c9-Cdx">
             <objects>
-                <viewController storyboardIdentifier="TableOneChild" id="dq8-Kd-E29" customClass="FirstChildViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TableOneChild" id="dq8-Kd-E29" customClass="ChildViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ngc-QN-bXA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tz6-Uh-FN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2740" y="2179.8029556650249"/>
+            <point key="canvasLocation" x="-1991" y="2211"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="kwO-Ue-wTm">
