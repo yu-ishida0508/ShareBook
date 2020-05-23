@@ -95,7 +95,7 @@ class FirstTableViewController: UITableViewController{
         //FirstChildVCのインスタンス取得
         let firstTableChildViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableOneChild") as! FirstChildViewController
     
-//MARK: - ここの記述が困っています
+//MARK: - 子ビューへの引き渡し
         // 配列からタップされたインデックスのデータを取り出す
         let postData = postArray[indexPath.row]
         
