@@ -15,7 +15,7 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!   //投稿者
     @IBOutlet weak var feelingTextView: UITextView! //感想
     
-    var postData:PostData!
+    var postData:PostData! //
     
 //Firebaseに登録している画像表示
 func setPostData(_ postData: PostData) {

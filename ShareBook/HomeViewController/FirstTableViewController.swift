@@ -26,7 +26,7 @@ class FirstTableViewController: UITableViewController{
         firstTableView.dataSource = self
         firstTableView.backgroundColor = .rgb(red: 240, green: 240, blue: 240)
     }
-//MARK:-表示データの読み込み
+//MARK:-表示データの読み込み(日付順)
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("DEBUG_PRINT: viewWillAppear")

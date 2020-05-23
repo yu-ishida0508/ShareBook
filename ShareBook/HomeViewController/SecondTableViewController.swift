@@ -26,7 +26,7 @@ class SecondTableViewController: UITableViewController {
             secondTableView.dataSource = self
             secondTableView.backgroundColor = .rgb(red: 240, green: 240, blue: 240)
         }
-    //MARK:-表示データの読み込み
+    //MARK:-表示データの読み込み（いいね top 100）
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             print("DEBUG_PRINT: viewWillAppear")
@@ -35,7 +35,10 @@ class SecondTableViewController: UITableViewController {
                 // ログイン済み
                 if listener == nil {
                     // listener未登録なら、登録してスナップショットを受信する
-                    let postsRef = Firestore.firestore().collection(Const.PostPath).order(by: "date", descending: true)
+                    let postsRef = Firestore.firestore().collection(Const.PostPath).whereField("likes", isGreaterThan: ("likes".))
+                                 print("likes".count)
+                    
+//                        .order(by:"likes", descending: true).limit(to: 100)
                     listener = postsRef.addSnapshotListener() { (querySnapshot, error) in
                         if let error = error {
                             print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
