@@ -59,7 +59,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             })
         }
     }
-//MARK: -
+//MARK: - 設定
 
 
     }
