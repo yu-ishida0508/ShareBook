@@ -16,7 +16,7 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var feelingTextView: UITextView! //感想
     
     var postData:PostData!
-   
+    
 //Firebaseに登録している画像表示
 func setPostData(_ postData: PostData) {
     // 画像の表示
