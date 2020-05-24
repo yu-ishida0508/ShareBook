@@ -222,7 +222,8 @@ extension ThirdTableViewController : IndicatorInfoProvider {
     //サブタイトル
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 //        return IndicatorInfo(title: " ACCOUNT", image: UIImage(named: "profile"))
-        return IndicatorInfo(image: UIImage(named: "profile"))
+//        return IndicatorInfo(image: UIImage(named: "profile"))
+        return IndicatorInfo(image: UIImage(named: "StarShape"))
     }
 
 }

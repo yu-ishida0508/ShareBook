@@ -145,7 +145,7 @@ class FirstTableViewController: UITableViewController{
 extension FirstTableViewController : IndicatorInfoProvider {
     //TabBarサブタイトル
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {//        return IndicatorInfo(title: " HOME", image: UIImage(named: "home"))
-        return IndicatorInfo(image: UIImage(named: "home"))
+        return IndicatorInfo(image: UIImage(named: "homeShape"))
         
     }
 }
