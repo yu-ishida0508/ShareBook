@@ -65,10 +65,10 @@ class TableViewCellTwo: UITableViewCell {
 
             // いいねボタンの表示
             if postData.isLiked {
-                let buttonImage = UIImage(named: "like_exist")
+                let buttonImage = UIImage(named: "StarYellow")
                 self.likeButton.setImage(buttonImage, for: .normal)
             } else {
-                let buttonImage = UIImage(named: "like_none")
+                let buttonImage = UIImage(named: "StarBorder")
                 self.likeButton.setImage(buttonImage, for: .normal)
             }
             

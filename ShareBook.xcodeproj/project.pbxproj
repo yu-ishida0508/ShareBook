@@ -155,8 +155,8 @@
 				62F743E524705F26003701D4 /* ResetPassViewController.swift */,
 				62BC9B9C246E5BAF00799BBD /* PostViewController.swift */,
 				62BC9B9A246E5B9D00799BBD /* ImageSelectViewController.swift */,
-				62BC9B9E246E5BD600799BBD /* SettingViewController.swift */,
 				62BC9BA0246E5BE600799BBD /* NewsViewController.swift */,
+				62BC9B9E246E5BD600799BBD /* SettingViewController.swift */,
 			);
 			path = AnotherViewController;
 			sourceTree = "<group>";

@@ -104,7 +104,7 @@
                                                 <constraint firstAttribute="height" constant="35" id="Qt9-hV-h6F"/>
                                                 <constraint firstAttribute="width" constant="35" id="c7d-93-JNY"/>
                                             </constraints>
-                                            <state key="normal" image="like_none"/>
+                                            <state key="normal" image="StarBorder"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いいね数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8V-f7-TXR">
                                             <rect key="frame" x="327" y="98" width="41" height="12"/>
@@ -213,7 +213,7 @@
                                                 <constraint firstAttribute="height" constant="35" id="CQe-oP-q8H"/>
                                                 <constraint firstAttribute="width" constant="35" id="YLC-au-Ghi"/>
                                             </constraints>
-                                            <state key="normal" image="like_none"/>
+                                            <state key="normal" image="StarBorder"/>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -301,7 +301,7 @@
                                                 <constraint firstAttribute="width" constant="35" id="82p-Yc-IoY"/>
                                                 <constraint firstAttribute="height" constant="35" id="WKc-gq-wbI"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="like_none"/>
+                                            <state key="normal" title="Button" image="StarBorder"/>
                                         </button>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="感想" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIc-oi-Vsf">
                                             <rect key="frame" x="90" y="49" width="235" height="60"/>
@@ -991,8 +991,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-AU-ifs">
-                                <rect key="frame" x="307.66666666666669" y="324" width="30" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <rect key="frame" x="306.66666666666669" y="324" width="31" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="EsQ-kw-uvA" kind="unwind" unwindAction="unwind:" id="ekS-dk-AmA"/>
@@ -1017,19 +1017,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="ドメイン指定受信されている方は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6M-cV-xYS">
-                                <rect key="frame" x="37.666666666666657" y="299" width="154" height="12"/>
+                                <rect key="frame" x="36.666666666666657" y="299" width="154" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@sharebook-ce3e0.firebaseapp.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjf-Ti-yfM">
-                                <rect key="frame" x="37.666666666666657" y="314" width="202" height="14.666666666666686"/>
+                                <rect key="frame" x="36.666666666666657" y="314" width="202" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="を許可してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTL-cu-mUp">
-                                <rect key="frame" x="37.666666666666657" y="331.66666666666669" width="92" height="12"/>
+                                <rect key="frame" x="36.666666666666657" y="333" width="92" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1104,9 +1104,9 @@
         <image name="Rectangle" width="300" height="40"/>
         <image name="ResetPass" width="1017" height="903"/>
         <image name="ResetPassBar" width="300" height="40"/>
+        <image name="StarBorder" width="44" height="43"/>
         <image name="exclamationmark.bubble" catalog="system" width="128" height="110"/>
         <image name="house" catalog="system" width="128" height="110"/>
-        <image name="like_none" width="40" height="40"/>
         <image name="paperplane" catalog="system" width="128" height="121"/>
         <image name="setting" width="25" height="25"/>
         <image name="settingBar" width="300" height="20"/>
