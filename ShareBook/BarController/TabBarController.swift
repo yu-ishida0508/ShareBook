@@ -44,12 +44,6 @@ class TabBarController: UITabBarController,UITabBarControllerDelegate {
                 present(imageSelectViewController, animated: true)
                 return false
             }
-            else if viewController is FavoriteViewController {
-                // FavoriteViewControllerは、タブ切り替えではなくモーダル画面遷移する
-                let imageSelectViewController = storyboard!.instantiateViewController(withIdentifier: "Favorite")
-                present(imageSelectViewController, animated: true)
-                return false
-            }
             else if viewController is NewsViewController {
                 // NewsViewControllerは、タブ切り替えではなくモーダル画面遷移する
                 let imageSelectViewController = storyboard!.instantiateViewController(withIdentifier: "News")

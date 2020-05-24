@@ -28,7 +28,6 @@
 		62BC9B9D246E5BAF00799BBD /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B9C246E5BAF00799BBD /* PostViewController.swift */; };
 		62BC9B9F246E5BD600799BBD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B9E246E5BD600799BBD /* SettingViewController.swift */; };
 		62BC9BA1246E5BE600799BBD /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA0246E5BE600799BBD /* NewsViewController.swift */; };
-		62BC9BA3246E5DE800799BBD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA2246E5DE800799BBD /* FavoriteViewController.swift */; };
 		62BC9BA6246E663600799BBD /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA5246E663600799BBD /* TabBarController.swift */; };
 		62BC9BA8246E66AC00799BBD /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9BA7246E66AC00799BBD /* UIColor-Extension.swift */; };
 		62F743E624705F26003701D4 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F743E524705F26003701D4 /* ResetPassViewController.swift */; };
@@ -60,7 +59,6 @@
 		62BC9B9C246E5BAF00799BBD /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		62BC9B9E246E5BD600799BBD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		62BC9BA0246E5BE600799BBD /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		62BC9BA2246E5DE800799BBD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		62BC9BA5246E663600799BBD /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		62BC9BA7246E66AC00799BBD /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		62F743E524705F26003701D4 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				62BC9B9C246E5BAF00799BBD /* PostViewController.swift */,
 				62BC9B9A246E5B9D00799BBD /* ImageSelectViewController.swift */,
 				62BC9B9E246E5BD600799BBD /* SettingViewController.swift */,
-				62BC9BA2246E5DE800799BBD /* FavoriteViewController.swift */,
 				62BC9BA0246E5BE600799BBD /* NewsViewController.swift */,
 			);
 			path = AnotherViewController;
@@ -309,7 +306,6 @@
 				62AC3D45247532B9003DE5B8 /* TableViewCellThree.swift in Sources */,
 				62BC9B9F246E5BD600799BBD /* SettingViewController.swift in Sources */,
 				62BA2C23247915060053182A /* ChildViewController.swift in Sources */,
-				62BC9BA3246E5DE800799BBD /* FavoriteViewController.swift in Sources */,
 				62BC9B97246E5B5D00799BBD /* LoginViewController.swift in Sources */,
 				62BC9BA1246E5BE600799BBD /* NewsViewController.swift in Sources */,
 				62BC9B81246E5A1600799BBD /* AppDelegate.swift in Sources */,

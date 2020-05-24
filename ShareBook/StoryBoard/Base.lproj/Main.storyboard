@@ -762,7 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="04M-Ll-3H0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2298.4000000000001" y="833.43328335832086"/>
+            <point key="canvasLocation" x="1610" y="833"/>
         </scene>
         <!--投稿-->
         <scene sceneID="F9o-6F-e7B">
@@ -827,22 +827,6 @@
             </objects>
             <point key="canvasLocation" x="-17" y="834"/>
         </scene>
-        <!--読みたい-->
-        <scene sceneID="ia0-1s-L9A">
-            <objects>
-                <viewController storyboardIdentifier="Favorite" id="MDg-as-aaC" customClass="FavoriteViewController" customModule="ShareBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7kl-Wz-PAC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="5Ij-lB-noJ"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="読みたい" image="star" catalog="system" id="OiD-91-8rZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc1-ZS-Rsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="772" y="834"/>
-        </scene>
         <!--ニュース-->
         <scene sceneID="C3O-5g-EOQ">
             <objects>
@@ -857,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QpQ-0s-jCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="834"/>
+            <point key="canvasLocation" x="849" y="833"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ZxQ-TA-Qfa">
@@ -1106,7 +1090,6 @@
                     <connections>
                         <segue destination="e7B-m7-7tu" kind="relationship" relationship="viewControllers" id="NQq-8F-3JY"/>
                         <segue destination="hbB-Rl-ver" kind="relationship" relationship="viewControllers" id="3vX-Ig-S4T"/>
-                        <segue destination="MDg-as-aaC" kind="relationship" relationship="viewControllers" id="U6I-Fo-GCp"/>
                         <segue destination="5C5-WW-ZdK" kind="relationship" relationship="viewControllers" id="tH5-t0-Jtj"/>
                         <segue destination="sfT-dw-T2F" kind="relationship" relationship="viewControllers" id="GGD-sH-RXQ"/>
                     </connections>
@@ -1128,6 +1111,5 @@
         <image name="setting" width="25" height="25"/>
         <image name="settingBar" width="300" height="20"/>
         <image name="settingBarButton" width="300" height="40"/>
-        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>
