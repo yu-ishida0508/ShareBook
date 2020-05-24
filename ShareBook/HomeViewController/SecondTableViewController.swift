@@ -35,10 +35,7 @@ class SecondTableViewController: UITableViewController {
                 // ログイン済み
                 if listener == nil {
                     // listener未登録なら、登録してスナップショットを受信する
-                    let postsRef = Firestore.firestore().collection(Const.PostPath).whereField("likes", isGreaterThan: ("likes".))
-                                 print("likes".count)
-                    
-//                        .order(by:"likes", descending: true).limit(to: 100)
+                    let postsRef = Firestore.firestore().collection(Const.PostPath).order(by: "date", descending: true)
                     listener = postsRef.addSnapshotListener() { (querySnapshot, error) in
                         if let error = error {
                             print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
@@ -50,6 +47,11 @@ class SecondTableViewController: UITableViewController {
                             let postData = PostData(document: document)
                             return postData
                         }
+                        
+                        
+                        
+//                        postArray.sort{ _,_ in }
+                        
                         // TableViewの表示を更新する
                         self.tableView.reloadData()
                     }
@@ -81,7 +83,7 @@ class SecondTableViewController: UITableViewController {
             
             // セル内のボタンのアクションをソースコードで設定する
             cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
-
+            
             return cell
         }
     //MARK:- 行間の幅
@@ -107,6 +109,9 @@ class SecondTableViewController: UITableViewController {
             
             //データ引き渡しと画面切り替え
             self.present(childViewController, animated: true, completion: nil) //画面切り替え
+            
+            //選択状態を削除
+            tableView.deselectRow(at: indexPath, animated: true)
             
 
         }

@@ -105,6 +105,9 @@ class FirstTableViewController: UITableViewController{
         //データ引き渡しと画面切り替え
         self.present(childViewController, animated: true, completion: nil) //画面切り替え
         
+        //選択状態を削除
+        tableView.deselectRow(at: indexPath, animated: true)
+        
 
     }
     

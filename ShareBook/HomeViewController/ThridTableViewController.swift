@@ -14,8 +14,11 @@ class ThirdTableViewController: UITableViewController {
     @IBOutlet var thirdTableView: UITableView!
     
     
-        // 投稿データを格納する配列
+        // 投稿(isLikedのみ)データを格納する配列
         var postArray: [PostData] = []
+        // 投稿全データを格納する配列
+        var postArrayAll: [PostData] = []
+        var num:Int = 0
         
     // Firestoreのリスナー
         var listener: ListenerRegistration!
@@ -25,6 +28,7 @@ class ThirdTableViewController: UITableViewController {
             thirdTableView.delegate = self
             thirdTableView.dataSource = self
             thirdTableView.backgroundColor = .rgb(red: 240, green: 240, blue: 240)
+
         }
     //MARK:-表示データの読み込み
         override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +38,7 @@ class ThirdTableViewController: UITableViewController {
             if Auth.auth().currentUser != nil {
                 // ログイン済み
                 if listener == nil {
+                    
                     // listener未登録なら、登録してスナップショットを受信する
                     let postsRef = Firestore.firestore().collection(Const.PostPath).order(by: "date", descending: true)
                     listener = postsRef.addSnapshotListener() { (querySnapshot, error) in
@@ -42,11 +47,30 @@ class ThirdTableViewController: UITableViewController {
                             return
                         }
                         // 取得したdocumentをもとにPostDataを作成し、postArrayの配列にする。
-                        self.postArray = querySnapshot!.documents.map { document in
+                        self.postArrayAll = querySnapshot!.documents.map { document in
                             print("DEBUG_PRINT: document取得 \(document.documentID)")
-                            let postData = PostData(document: document)
+                            let postData = PostData(document: document) //(引数名：型)
+                            
+//                            print("DEBUG_PRINT: \(postData.isLiked)")
+//                            print("DEBUG_PRINT: \(postData.name)")
+//                            print("DEBUG_PRINT: \(postData.date)")
+
                             return postData
                         }
+//MARK:- postArrayAllからisLiked = trueのみ抽出して「postArray」
+                        // 配列の初期化
+                        self.postArray = []
+                        print("DEBUG_PRINT:postArrayAll数\(self.postArrayAll.count)")
+                        for count in 0...(self.postArrayAll.count - 1){
+                            print("DEBUG_PRINT:count\(count)")
+                                if self.postArrayAll[count].isLiked == true {
+                                    print("DEBUG_PRINT:isLiked判定")
+                                    self.postArray.append(self.postArrayAll[count])
+                                    self.num += 1
+
+                            }
+                        }
+//MARK:-
                         // TableViewの表示を更新する
                         self.tableView.reloadData()
                     }
@@ -67,20 +91,32 @@ class ThirdTableViewController: UITableViewController {
 
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     //        return 10
+            
             return postArray.count
         }
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
+//        if  postArray[indexPath.row].isLiked == true {
+            
             // セルを取得してデータを設定する
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellThree", for: indexPath) as! TableViewCellThree
             cell.setPostData(postArray[indexPath.row])
-            
+           
             // セル内のボタンのアクションをソースコードで設定する
             cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
 
             return cell
-        }
+            }
+//        else{
+////            let cell = tableView.dequeueReusableCell(withIdentifier: "CellThree", for: indexPath) as! TableViewCellThree
+//
+//            return
+            
+            
+//            }
+            
+//        }
     //MARK:- 行間の幅
         override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             //最低の行の高さ
@@ -104,12 +140,22 @@ class ThirdTableViewController: UITableViewController {
             
             //データ引き渡しと画面切り替え
             self.present(childViewController, animated: true, completion: nil) //画面切り替え
+            
+            //選択状態を削除
+            tableView.deselectRow(at: indexPath, animated: true)
 
         }
         
     //MARK:- セル内のボタンがタップされた時に呼ばれるメソッド
         @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
             print("DEBUG_PRINT: likeボタンがタップされました。")
+            
+
+            
+            
+            
+            
+            
 
             // タップされたセルのインデックスを求める
             let touch = event.allTouches?.first
