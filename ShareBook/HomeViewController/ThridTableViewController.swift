@@ -58,7 +58,7 @@ class ThirdTableViewController: UITableViewController {
 
                             return postData
                         }
-//MARK:- postArrayAllからisLiked = trueのみ抽出して「postArray」
+//MARK:- postArrayAllからisLiked = trueのみ抽出して「postArray」に代入
                         // 配列の初期化
                         self.postArray = []
                         print("DEBUG_PRINT:postArrayAll数\(self.postArrayAll.count)")
@@ -66,7 +66,7 @@ class ThirdTableViewController: UITableViewController {
                             print("DEBUG_PRINT:count\(count)")
                                 if self.postArrayAll[count].isLiked == true {
                                     print("DEBUG_PRINT:isLiked判定")
-                                    self.postArray.append(self.postArrayAll[count])
+                                    self.postArray.append(self.postArrayAll[count])//postArrayに追加
                                     self.num += 1
 
                             }

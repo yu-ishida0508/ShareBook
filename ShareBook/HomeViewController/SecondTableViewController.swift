@@ -16,6 +16,9 @@ class SecondTableViewController: UITableViewController {
     
         // 投稿データを格納する配列
         var postArray: [PostData] = []
+       // 投稿全データを格納する配列
+        var postArrayAll: [PostData] = []
+        var num:Int = 0
         
     // Firestoreのリスナー
         var listener: ListenerRegistration!
@@ -35,22 +38,33 @@ class SecondTableViewController: UITableViewController {
                 // ログイン済み
                 if listener == nil {
                     // listener未登録なら、登録してスナップショットを受信する
-                    let postsRef = Firestore.firestore().collection(Const.PostPath).order(by: "date", descending: true)
+                    let postsRef = Firestore.firestore().collection(Const.PostPath).order(by: "date", descending: true).limit(to: 100)
                     listener = postsRef.addSnapshotListener() { (querySnapshot, error) in
                         if let error = error {
                             print("DEBUG_PRINT: snapshotの取得が失敗しました。 \(error)")
                             return
                         }
                         // 取得したdocumentをもとにPostDataを作成し、postArrayの配列にする。
-                        self.postArray = querySnapshot!.documents.map { document in
+                        self.postArrayAll = querySnapshot!.documents.map { document in
                             print("DEBUG_PRINT: document取得 \(document.documentID)")
                             let postData = PostData(document: document)
                             return postData
                         }
-                        
-                        
-                        
-//                        postArray.sort{ _,_ in }
+//MARK:- postArrayAllからlikes >= 3 のみ抽出して「postArray」に代入
+                        // 配列の初期化
+                        self.postArray = []
+                        print("DEBUG_PRINT:postArrayAll数\(self.postArrayAll.count)")
+                        for count in 0...(self.postArrayAll.count - 1){
+                            print("DEBUG_PRINT:count\(count)")
+                            if self.postArrayAll[count].likes.count >= 3 {
+                                    print("DEBUG_PRINT:likes判定")
+                                self.postArray.append(self.postArrayAll[count])//postArrayに追加
+                                    self.num += 1
+
+                            }
+                        }
+//MARK:-
+
                         
                         // TableViewの表示を更新する
                         self.tableView.reloadData()
