@@ -394,7 +394,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backButton:" destination="dq8-Kd-E29" eventType="touchUpInside" id="2mx-UL-XlV"/>
+                                    <action selector="backButton:" destination="dq8-Kd-E29" eventType="touchUpInside" id="z3n-iS-CSX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgh-aU-76E">
@@ -585,9 +585,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adl-D2-Yqd">
+                                <rect key="frame" x="37.666666666666657" y="585" width="300" height="40"/>
+                                <state key="normal" title="戻る" backgroundImage="settingBarButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="RBD-2U-Hdd" eventType="touchUpInside" id="aHH-UI-Rj7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Adl-D2-Yqd" firstAttribute="centerX" secondItem="c6j-Ad-70d" secondAttribute="centerX" id="D7U-Xu-azS"/>
                             <constraint firstItem="8vn-lm-3HG" firstAttribute="leading" secondItem="1rh-cl-bTw" secondAttribute="leading" constant="50" id="VMr-OM-JJu"/>
                             <constraint firstItem="A62-aq-XAo" firstAttribute="top" secondItem="g2z-xS-YuT" secondAttribute="bottom" constant="5" id="ZqI-5V-xbN"/>
                             <constraint firstItem="g2z-xS-YuT" firstAttribute="top" secondItem="1rh-cl-bTw" secondAttribute="top" constant="10" id="cio-hY-Fsq"/>
@@ -595,6 +605,7 @@
                             <constraint firstItem="6cT-ph-JQh" firstAttribute="centerX" secondItem="c6j-Ad-70d" secondAttribute="centerX" id="hl2-pI-Lfz"/>
                             <constraint firstItem="A62-aq-XAo" firstAttribute="trailing" secondItem="g2z-xS-YuT" secondAttribute="trailing" id="jzc-gP-x6C"/>
                             <constraint firstItem="8vn-lm-3HG" firstAttribute="top" secondItem="g2z-xS-YuT" secondAttribute="bottom" constant="30" id="kep-Ys-Vwk"/>
+                            <constraint firstItem="Adl-D2-Yqd" firstAttribute="top" secondItem="6cT-ph-JQh" secondAttribute="bottom" constant="20" id="mP5-Ng-2hb"/>
                             <constraint firstItem="6cT-ph-JQh" firstAttribute="top" secondItem="8vn-lm-3HG" secondAttribute="bottom" constant="10" id="te4-LX-1lf"/>
                             <constraint firstItem="1rh-cl-bTw" firstAttribute="trailing" secondItem="g2z-xS-YuT" secondAttribute="trailing" constant="10" id="uqj-WU-cgN"/>
                         </constraints>

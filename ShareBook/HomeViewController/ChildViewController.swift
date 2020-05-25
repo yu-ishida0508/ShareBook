@@ -14,7 +14,10 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var writerLabel: UILabel!  //作者名
     @IBOutlet weak var nameLabel: UILabel!   //投稿者
     @IBOutlet weak var feelingTextView: UITextView! //感想
-    
+    @IBAction func backButton(_ sender: Any) {
+        // 前画面に戻る
+        self.dismiss(animated: true, completion: nil)
+    }
     var postData:PostData! //
     
 //Firebaseに登録している画像表示
