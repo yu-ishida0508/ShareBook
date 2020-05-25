@@ -83,34 +83,33 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     //MARK:- 行間の幅
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             //最低の行の高さ
-            newsTableView.estimatedRowHeight = 10
+            newsTableView.estimatedRowHeight = 20
             return UITableView.automaticDimension //自動的に高さ設定
-
         }
         
     //MARK: - セルをタップした時の処理(画面切り替え)...画像とコメントを表示する
-//        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//            print("test")
-// 
-//
-//            //FirstChildVCのインスタンス取得
-//            let childViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableOneChild") as! ChildViewController
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            print("test")
+ 
+
+            //FirstChildVCのインスタンス取得
+            let newsChildViewController = self.storyboard?.instantiateViewController(withIdentifier: "TableChildNews") as! ChildNewsViewController
         
     //MARK: - 子ビューへの引き渡し
             // 配列からタップされたインデックスのデータを取り出す
-//            let postData = postArray[indexPath.row]
+            let newsData = newsArray[indexPath.row]
 //
 //            //遷移先のプロパティ(postData)に情報セット
-//            childViewController.postData = postData
+            newsChildViewController.newsData = newsData
 //
 //            //データ引き渡しと画面切り替え
-//            self.present(childViewController, animated: true, completion: nil) //画面切り替え
+            self.present(newsChildViewController, animated: true, completion: nil) //画面切り替え
 //
 //            //選択状態を削除
-//            tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
 //
 
-//        }
+        }
     //MARK: -
 
     }

@@ -13,15 +13,8 @@ class TableViewCellNews: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView! //ニュース画像
     @IBOutlet weak var themeLabel: UILabel! //テーマ
     @IBOutlet weak var newsTextView: UITextView!//メッセージ
-    
-
-
-//    @IBOutlet weak var postImageView: UIImageView! //投稿画像
-//    @IBOutlet weak var feelingTextView: UITextView!//感想
-//    @IBOutlet weak var writerLable: UILabel!       //著者
     @IBOutlet weak var dateLabel: UILabel!       //日付
-//    @IBOutlet weak var likeLabel: UILabel!       //いいね数
-//    @IBOutlet weak var likeButton: UIButton!    //いいねボタンはouteletで繋ぐ
+
     
     
     override func awakeFromNib() {

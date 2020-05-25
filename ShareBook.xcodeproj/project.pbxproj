@@ -19,6 +19,7 @@
 		62BA2C23247915060053182A /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C22247915060053182A /* ChildViewController.swift */; };
 		62BA2C56247B4D430053182A /* TableViewCellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C55247B4D430053182A /* TableViewCellNews.swift */; };
 		62BA2C58247B4F9B0053182A /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C57247B4F9B0053182A /* NewsData.swift */; };
+		62BA2C5A247C1D1F0053182A /* ChildNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C59247C1D1F0053182A /* ChildNewsViewController.swift */; };
 		62BC9B81246E5A1600799BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B80246E5A1600799BBD /* AppDelegate.swift */; };
 		62BC9B83246E5A1600799BBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B82246E5A1600799BBD /* SceneDelegate.swift */; };
 		62BC9B88246E5A1600799BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BC9B86246E5A1600799BBD /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		62BA2C22247915060053182A /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		62BA2C55247B4D430053182A /* TableViewCellNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellNews.swift; sourceTree = "<group>"; };
 		62BA2C57247B4F9B0053182A /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		62BA2C59247C1D1F0053182A /* ChildNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildNewsViewController.swift; sourceTree = "<group>"; };
 		62BC9B7D246E5A1600799BBD /* ShareBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BC9B80246E5A1600799BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BC9B82246E5A1600799BBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				62AC3D2824751CE3003DE5B8 /* SecondTableViewController.swift */,
 				62AC3D2A24751CF2003DE5B8 /* ThridTableViewController.swift */,
 				62BA2C22247915060053182A /* ChildViewController.swift */,
+				62BA2C59247C1D1F0053182A /* ChildNewsViewController.swift */,
 				62AC3D4024753297003DE5B8 /* TableViewCellOne.swift */,
 				62AC3D42247532AD003DE5B8 /* TableViewCellTwo.swift */,
 				62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */,
@@ -307,6 +310,7 @@
 				62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */,
 				62BA2C58247B4F9B0053182A /* NewsData.swift in Sources */,
 				62AC3D2B24751CF2003DE5B8 /* ThridTableViewController.swift in Sources */,
+				62BA2C5A247C1D1F0053182A /* ChildNewsViewController.swift in Sources */,
 				62BC9B99246E5B7900799BBD /* HomeViewController.swift in Sources */,
 				62BC9B9D246E5BAF00799BBD /* PostViewController.swift in Sources */,
 				62BC9BA6246E663600799BBD /* TabBarController.swift in Sources */,
