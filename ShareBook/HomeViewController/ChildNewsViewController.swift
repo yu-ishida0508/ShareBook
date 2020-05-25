@@ -15,6 +15,10 @@ class ChildNewsViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!   //時間
     @IBOutlet weak var newsTextView: UITextView! //ニュース
     
+    @IBAction func backButton(_ sender: Any) {
+        // 前画面に戻る
+        self.dismiss(animated: true, completion: nil)
+    }
     var newsData:NewsData! //
     
 //Firebaseに登録している画像表示

@@ -163,7 +163,7 @@ class ThirdTableViewController: UITableViewController {
             // タイトル, メッセージ, Alertのスタイルを指定する
             // 第3引数のpreferredStyleでアラートの表示スタイルを指定する
             
-                let alert: UIAlertController = UIAlertController(title: "確認", message: "お気に入りから削除してもいいですか？", preferredStyle:  .alert)
+                let alert: UIAlertController = UIAlertController(title: "確認", message: "ブックリストから削除してもいいですか？", preferredStyle:  .alert)
 
                     // ② Actionの設定
                     // Action初期化時にタイトル, スタイル, 押された時に実行されるハンドラを指定する
