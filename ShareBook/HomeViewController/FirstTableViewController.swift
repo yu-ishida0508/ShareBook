@@ -47,6 +47,7 @@ class FirstTableViewController: UITableViewController{
                         let postData = PostData(document: document)
                         return postData
                     }
+                    
                     // TableViewの表示を更新する
                     self.tableView.reloadData()
                 }

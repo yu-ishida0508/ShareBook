@@ -17,6 +17,8 @@
 		62AC3D45247532B9003DE5B8 /* TableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */; };
 		62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC3D57247676E6003DE5B8 /* PostData.swift */; };
 		62BA2C23247915060053182A /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C22247915060053182A /* ChildViewController.swift */; };
+		62BA2C56247B4D430053182A /* TableViewCellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C55247B4D430053182A /* TableViewCellNews.swift */; };
+		62BA2C58247B4F9B0053182A /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA2C57247B4F9B0053182A /* NewsData.swift */; };
 		62BC9B81246E5A1600799BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B80246E5A1600799BBD /* AppDelegate.swift */; };
 		62BC9B83246E5A1600799BBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC9B82246E5A1600799BBD /* SceneDelegate.swift */; };
 		62BC9B88246E5A1600799BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62BC9B86246E5A1600799BBD /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellThree.swift; sourceTree = "<group>"; };
 		62AC3D57247676E6003DE5B8 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		62BA2C22247915060053182A /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		62BA2C55247B4D430053182A /* TableViewCellNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellNews.swift; sourceTree = "<group>"; };
+		62BA2C57247B4F9B0053182A /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		62BC9B7D246E5A1600799BBD /* ShareBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BC9B80246E5A1600799BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BC9B82246E5A1600799BBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				62AC3D4024753297003DE5B8 /* TableViewCellOne.swift */,
 				62AC3D42247532AD003DE5B8 /* TableViewCellTwo.swift */,
 				62AC3D44247532B9003DE5B8 /* TableViewCellThree.swift */,
+				62BA2C55247B4D430053182A /* TableViewCellNews.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 				62BC9B95246E5B2800799BBD /* AnotherViewController */,
 				62AC3D222473E12B003DE5B8 /* Const.swift */,
 				62AC3D57247676E6003DE5B8 /* PostData.swift */,
+				62BA2C57247B4F9B0053182A /* NewsData.swift */,
 				62BC9B82246E5A1600799BBD /* SceneDelegate.swift */,
 				62BC9B80246E5A1600799BBD /* AppDelegate.swift */,
 				62BC9BA7246E66AC00799BBD /* UIColor-Extension.swift */,
@@ -299,11 +305,13 @@
 				62AC3D2724751CD5003DE5B8 /* FirstTableViewController.swift in Sources */,
 				62BC9B9B246E5B9D00799BBD /* ImageSelectViewController.swift in Sources */,
 				62AC3D58247676E6003DE5B8 /* PostData.swift in Sources */,
+				62BA2C58247B4F9B0053182A /* NewsData.swift in Sources */,
 				62AC3D2B24751CF2003DE5B8 /* ThridTableViewController.swift in Sources */,
 				62BC9B99246E5B7900799BBD /* HomeViewController.swift in Sources */,
 				62BC9B9D246E5BAF00799BBD /* PostViewController.swift in Sources */,
 				62BC9BA6246E663600799BBD /* TabBarController.swift in Sources */,
 				62AC3D45247532B9003DE5B8 /* TableViewCellThree.swift in Sources */,
+				62BA2C56247B4D430053182A /* TableViewCellNews.swift in Sources */,
 				62BC9B9F246E5BD600799BBD /* SettingViewController.swift in Sources */,
 				62BA2C23247915060053182A /* ChildViewController.swift in Sources */,
 				62BC9B97246E5B5D00799BBD /* LoginViewController.swift in Sources */,

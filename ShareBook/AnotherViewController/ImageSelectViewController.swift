@@ -53,7 +53,7 @@ class ImageSelectViewController: UIViewController,UIImagePickerControllerDelegat
            }
         
        }
-////MARK:- キャンセル(Retake)したときに呼ばれる<必須>メソッド(CLImageEditorを利用しない)
+//MARK:- キャンセル(Retake)したときに呼ばれる<必須>メソッド(CLImageEditorを利用しない)
 //       func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
 //           // ImageSelectViewController画面を閉じてタブ画面に戻る
 ////           self.presentingViewController?.dismiss(animated: true, completion: nil)

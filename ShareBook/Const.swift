@@ -11,4 +11,7 @@ import Foundation
 struct Const {
     static let ImagePath = "images" //Firebase Storage内の画像ファイルの保存場所
     static let PostPath = "posts" //Firestore内の投稿データ(投稿者名、キャプション、投稿日時等)の保存場所
+    
+    static let NewsImagePath = "newsImages"       //"images"からの変更
+    static let NewsPostPath = "newsPosts"   //"posts"からの変更
 }

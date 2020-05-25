@@ -42,11 +42,5 @@ func setPostData(_ postData: PostData) {
 
 
     }
-    //戻るボタン
-    @IBAction func backButton(_ sender: Any) {
-        // 画面を閉じてタブ画面に戻る
-        self.dismiss(animated: true, completion: nil)
-        
-    }
     
 }
