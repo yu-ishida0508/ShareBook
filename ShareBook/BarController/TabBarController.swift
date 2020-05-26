@@ -66,8 +66,8 @@ class TabBarController: UITabBarController,UITabBarControllerDelegate {
                         let newsData = NewsData(document: document)
                         return newsData
                     }
-                    print("DEBUG_PRINT: ニュース投稿最新日付\(self.newsArray[2].date!)")
-                    print("DEBUG_PRINT: 現時点の日付 \(self.dt)")
+//                    print("DEBUG_PRINT: ニュース投稿最新日付\(self.newsArray[2].date!)")
+//                    print("DEBUG_PRINT: 現時点の日付 \(self.dt)")
                     
                     //２つの日付(現時点と投稿資料の最新日付)を比較して差を整数で取得
                     let dayInterval = (Calendar.current.dateComponents([.day], from: self.newsArray[0].date!, to: self.dt)).day

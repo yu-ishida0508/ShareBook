@@ -11,12 +11,10 @@ import XLPagerTabStrip //追加
 
 //修正
 class HomeViewController: ButtonBarPagerTabStripViewController {
-    
 
     override func viewDidLoad() {
         self.loadDesign()
         super.viewDidLoad()
-
     }
     
 //MARK:-youtube模範のTabBAR
