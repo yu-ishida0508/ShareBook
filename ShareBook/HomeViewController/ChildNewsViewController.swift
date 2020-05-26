@@ -15,7 +15,7 @@ class ChildNewsViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!   //時間
     @IBOutlet weak var newsTextView: UITextView! //ニュース
     
-    @IBAction func backButton(_ sender: Any) {
+    @IBAction func backButton(_ sender: Any) { //戻る
         // 前画面に戻る
         self.dismiss(animated: true, completion: nil)
     }

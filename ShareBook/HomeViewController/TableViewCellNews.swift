@@ -31,7 +31,7 @@ class TableViewCellNews: UITableViewCell {
     
 
     
-//MARK: - PostDataの内容をセルに表示
+//MARK: - NewsDataの内容をセルに表示
     func setNewsData(_ newsData: NewsData) {
         // 画像の表示
         newsImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
