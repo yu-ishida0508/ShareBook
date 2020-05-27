@@ -34,7 +34,7 @@ class TabBarController: UITabBarController,UITabBarControllerDelegate {
             // ログインしていないときの処理
             let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
                 self.present(loginViewController!, animated: true, completion: nil) //画面切り替え
-            self.present(loginViewController!, animated: true, completion: {() -> Void in print("処理完了")})
+//            self.present(loginViewController!, animated: true, completion: {() -> Void in print("処理完了")})
         }
     }
     
